@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+            background-image: linear-gradient(to bottom right, #bad80a, #009e49);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main {
+            height: 90vh;
+            width: 30vw;
+            background-image: linear-gradient(to top left, #caeb0f, #007034);
+            border: 2px solid black;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 30px;
+        }
+
+        form {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        form>input {
+            padding: 10px 25px;
+            border-radius: 5px;
+            background-color: transparent;
+            border: 2px solid black;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 1.2rem;
+            color: black;
+        }
+
+        form>label {
+            color: white;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        @media (max-width: 550px) {
+            .main {
+                width: 65vw;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="head">
+            <h1 style="text-transform: uppercase; text-decoration: underline;">Sign Up</h1>
+        </div>
+        <form action="">
+            <label for="firstName">First Name : </label>
+            <input type="text" id="firstName">
+            <label for="lastName">Last Name : </label>
+            <input type="text" id="lastName">
+            <label for="email">Email : </label>
+            <input type="text" id="email">
+            <label for="password">Password : </label>
+            <input type="password" id="password">
+            <input type="submit" id="submit" style="margin: 15px auto;">
+        </form>
+    </div>
+
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
