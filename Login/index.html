@@ -1,15 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+            background-image: linear-gradient(to bottom right, #a7ffeb, #004d40);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main {
+            height: 90vh;
+            width: 30vw;
+            background-image: linear-gradient(to top left, #abfae7, #004439);
+            border: 2px solid black;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 30px;
+        }
+
+        form {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        form>input {
+            padding: 10px 25px;
+            border-radius: 5px;
+            background-color: transparent;
+            border: 2px solid black;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 1.2rem;
+            color: white;
+        }
+
+        form>label {
+            color: black;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        form>button {
+            padding: 10px 25px;
+            background-color: transparent;
+            border: 2px solid black;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: white;
+            font-weight: bold;
+            margin-left: 73px !important;
+            margin-top: 15px;
+            cursor: pointer;
+            transition: all 0.4s ease-out;
+        }
+
+        form>button:hover {
+            background-color: black;
+        }
+
+        @media (max-width: 550px) {
+            .main {
+                width: 65vw;
+            }
+        }
+    </style>
     <title>Login Page</title>
 </head>
+
 <body>
-    
+    <div class="main">
+        <div class="head">
+            <h1 style="color: white; text-decoration: underline;">Login</h1>
+        </div>
+        <form action="">
+            <label for="firstName">User Name : </label>
+            <input type="text" id="firstName">
+            <label for="email">Email : </label>
+            <input type="text" id="email">
+            <label for="password">Password : </label>
+            <input type="password" id="password">
+            <button>login</button>
+        </form>
+    </div>
 
 
     <script src="app.js"></script>
 </body>
+
 </html>
