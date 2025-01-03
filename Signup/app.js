@@ -1,22 +1,33 @@
-let myBtn = document.querySelector("#submit")
+let myBtn = document.querySelector("button")
 let password = document.querySelector("#password")
+let confirmPassword = document.querySelector("#confirmPassword")
 let email = document.querySelector("#email")
-let firstName = document.querySelector("#firstName")
-let lastName = document.querySelector("#lastName")
+let userName = document.querySelector("#userName")
+
+console.log(password.value)
+console.log(confirmPassword.value)
 
 myBtn.addEventListener("click", () => {
-    if (password.value.length < 8) {
-        alert("Your Password Should have 8 characters!!!")
+    if (userName.value == '' || password.value.length < 8 || password.value != confirmPassword.value || email.value == '') {
+        alert("Please fill all fields correctly!");
     } else {
         let users = JSON.parse(localStorage.getItem("users")) || [];
         let user = {
+            userName: userName.value,
             password: password.value,
-            firstName: firstName.value,
             email: email.value,
-            lastName: lastName.value
-        }
-        users.push(user)
-        console.log("Me chala")
-        localStorage.setItem("users", JSON.stringify(users))
+        };
+        users.push(user);
+        localStorage.setItem("users", JSON.stringify(users));
+        alert("User registered successfully!");
+
+        setTimeout(() => {
+            window.location.href = '../Login/index.html'
+        }, 1000);
+        userName.value = '';
+        password.value = '';
+        email.value = '';
+        confirmPassword.value = '';
     }
-})
+});
+

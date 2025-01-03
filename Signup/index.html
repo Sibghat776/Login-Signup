@@ -15,7 +15,7 @@
         body {
             height: 100vh;
             width: 100vw;
-            background-image: linear-gradient(to bottom right, #bad80a, #009e49);
+            background-image: linear-gradient(to bottom right,#d1b496, #fed8b1);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -24,8 +24,9 @@
         .main {
             height: 90vh;
             width: 30vw;
-            background-image: linear-gradient(to top left, #caeb0f, #007034);
+            background-color: black;
             border: 2px solid black;
+            color: white;
             border-radius: 5px;
             display: flex;
             justify-content: center;
@@ -42,13 +43,17 @@
             flex-direction: column;
         }
 
-        form>input {
+        form>input, button {
             padding: 10px 25px;
             border-radius: 5px;
             background-color: transparent;
-            border: 2px solid black;
+            border: 2px solid white;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             font-size: 1.2rem;
+            color: white;
+        }
+        .active {
+            background-color: white;
             color: black;
         }
 
@@ -71,16 +76,16 @@
         <div class="head">
             <h1 style="text-transform: uppercase; text-decoration: underline;">Sign Up</h1>
         </div>
-        <form action="../Login/index.html">
-            <label for="firstName">First Name : </label>
-            <input type="text" id="firstName">
-            <label for="lastName">Last Name : </label>
-            <input type="text" id="lastName">
+        <form action="#">
+            <label for="userName">Username : </label>
+            <input type="text" id="userName">
             <label for="email">Email : </label>
             <input type="text" id="email">
             <label for="password">Password : </label>
             <input type="password" id="password">
-            <input type="submit" id="submit" style="margin: 15px auto;">
+            <label for="confirmPassword">Confirm Password : </label>
+            <input type="password" id="confirmPassword">
+            <button style="margin-left: 68px; margin-top: 15px;">SignUp</button>
         </form>
     </div>
 
