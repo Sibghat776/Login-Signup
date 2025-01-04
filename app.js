@@ -20,9 +20,8 @@ myBtn.addEventListener("click", () => {
         users.push(user);
         localStorage.setItem("users", JSON.stringify(users));
         alert("User registered successfully!");
-
         setTimeout(() => {
-            window.location.href = '../Login/index.html'
+            window.location.href = './Login/index.html'
         }, 1000);
         userName.value = '';
         password.value = '';
